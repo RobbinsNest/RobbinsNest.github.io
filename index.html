@@ -5,45 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RobbinsNest · GitHub 主页</title>
   <style>
-    body {
-      font-family: "Segoe UI", Roboto, sans-serif;
+    :root {
+      --primary: #2563eb;
+      --text-color: #111827;
+      --bg-light: #f9fafb;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-color: #f9fafb;
-      color: #111827;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-color);
       line-height: 1.6;
     }
     header {
-      background-color: #2563eb;
+      background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px 100px;
       text-align: center;
+      position: relative;
     }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
     }
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
+    .header-content {
+      padding-bottom: 20px;
     }
     main {
       max-width: 800px;
-      margin: 40px auto;
+      margin: 100px auto 60px;
       padding: 0 20px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 4px;
     }
     section {
       margin-bottom: 40px;
     }
-    h2 {
-      font-size: 1.5rem;
-      margin-bottom: 10px;
-      border-bottom: 2px solid #2563eb;
-      display: inline-block;
-      padding-bottom: 4px;
-    }
     a {
-      color: #2563eb;
+      color: var(--primary);
       text-decoration: none;
     }
     a:hover {
@@ -53,28 +75,31 @@
       text-align: center;
       font-size: 0.9rem;
       color: #6b7280;
-      margin: 60px 0 30px;
+      margin: 40px 0;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>RobbinsNest</h1>
-    <p>欢迎来到我的 GitHub Pages 主页</p>
+    <div class="header-content">
+      <h1>RobbinsNest</h1>
+      <p>欢迎来到我的 GitHub Pages 主页</p>
+    </div>
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="Avatar" />
   </header>
 
   <main>
     <section>
       <h2>关于我</h2>
-      <p>你好！我是 RobbinsNest，这是我的个人主页。你可以通过下方方式联系我，或访问我的 GitHub 查看项目与代码。</p>
+      <p>你好，我是 RobbinsNest，这是我的个人主页。欢迎浏览我的开源项目或通过下面方式联系我。</p>
     </section>
 
     <section>
       <h2>联系方式</h2>
       <p>
         🐙 GitHub: <a href="https://github.com/RobbinsNest" target="_blank">https://github.com/RobbinsNest</a><br>
-        📬 Email: <a href="mailto:yourname@example.com">yourname@example.com</a> <!-- 你可以改为真实邮箱 -->
+        📬 Email: <a href="mailto:1229213477@qq.com">1229213477@qq.com</a>
       </p>
     </section>
   </main>
