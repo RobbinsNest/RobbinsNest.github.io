@@ -10,13 +10,51 @@
       --text-color: #111827;
       --bg-light: #f9fafb;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Roboto, sans-serif; }
-    body { background-color: var(--bg-light); color: var(--text-color); line-height: 1.65; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Roboto, sans-serif;
+    }
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-color);
+      line-height: 1.65;
+    }
 
-    /* —— 顶部横幅 —— */
+    /* —— 顶部导航 —— */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 1px 4px rgba(0,0,0,.05);
+      z-index: 10;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 12px 0;
+      list-style: none;
+      gap: 24px;
+    }
+    nav a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 6px 10px;
+      border-radius: 6px;
+    }
+    nav a:hover {
+      background-color: #e5e7eb;
+    }
+
+    /* —— 头图区域 —— */
     header {
-      height: 60vh;                               /* 占视窗 60% 高 */
-      min-height: 320px;
+      margin-top: 48px; /* 避开导航栏 */
+      height: 45vh;
+      min-height: 280px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -25,28 +63,65 @@
       color: #fff;
       padding: 0 20px;
       background-image:
-        linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), /* 深色遮罩 */
+        linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
         url('https://raw.githubusercontent.com/RobbinsNest/RobbinsNest.github.io/main/%E5%B7%B4%E8%80%81%E5%B8%88%E9%9D%99%E6%80%81%E5%A3%81%E7%BA%B8%E7%94%B5%E8%84%91.jpg');
       background-size: cover;
       background-position: center;
-      background-attachment: fixed;               /* 视差效果，可去掉 */
+      background-attachment: fixed;
     }
-    header h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: .5rem; }
-    header p  { font-size: clamp(1rem, 2.5vw, 1.25rem); opacity: .9; }
+    header h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      opacity: 0.9;
+    }
 
-    /* —— 主体 —— */
-    main    { max-width: 800px; margin: 60px auto; padding: 0 20px; }
-    section { margin-bottom: 48px; }
-    h2      { font-size: 1.6rem; margin-bottom: .6rem; border-bottom: 3px solid var(--primary); display: inline-block; padding-bottom: 2px; }
+    /* —— 主体内容 —— */
+    main {
+      max-width: 800px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 48px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 0.6rem;
+      border-bottom: 3px solid var(--primary);
+      display: inline-block;
+      padding-bottom: 2px;
+    }
 
-    a       { color: var(--primary); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-    footer  { text-align: center; font-size: .9rem; color: #6b7280; margin: 40px 0 30px; }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin: 40px 0 30px;
+    }
   </style>
 </head>
 <body>
 
+  <!-- 顶部导航 -->
+  <nav>
+    <ul>
+      <li><a href="index.html">主页</a></li>
+      <li><a href="sites.html">常用网站汇总</a></li>
+    </ul>
+  </nav>
+
+  <!-- 头部横幅 -->
   <header>
     <h1>RobbinsNest</h1>
     <p>欢迎来到我的 GitHub Pages 主页</p>
@@ -68,7 +143,7 @@
   </main>
 
   <footer>
-    © 2025 RobbinsNest · 本页托管于 GitHub Pages
+    © 2025 RobbinsNest · 本页托管于 GitHub Pages
   </footer>
 
 </body>
