@@ -3,102 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>YOUR_NAME · GitHub Pages</title>
-
-  <!-- ——— 1️⃣ 轻量级内嵌样式：纯 CSS，无依赖 ——— -->
+  <title>RobbinsNest · GitHub 主页</title>
   <style>
-    :root {
-      --primary: #2563eb;      /* 主色调 */
-      --bg-light: #f9fafb;     /* 背景浅灰 */
-      --text-dark: #111827;    /* 正文字体 */
-      --rounded: 12px;
+    body {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #111827;
+      line-height: 1.6;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Roboto, sans-serif; }
-    body { background: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
-    header { background: var(--primary); color: #fff; padding: 64px 20px; text-align: center; }
-    header h1 { font-size: 2.5rem; margin-bottom: .3em; }
-    header p { font-size: 1.25rem; opacity: .9; }
-    nav { position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e5e7eb; }
-    nav ul { display: flex; gap: 1rem; list-style: none; max-width: 900px; margin: 0 auto; padding: 12px 20px; }
-    nav a { text-decoration: none; color: var(--text-dark); font-weight: 500; }
-    nav a:hover { color: var(--primary); }
-    section { max-width: 900px; margin: 60px auto; padding: 0 20px; }
-    section h2 { font-size: 1.75rem; margin-bottom: .8em; position: relative; }
-    section h2::after { content: ""; width: 60px; height: 3px; background: var(--primary); position: absolute; left: 0; bottom: -10px; border-radius: var(--rounded); }
-    .card-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
-    .card { background: #fff; border-radius: var(--rounded); padding: 24px; box-shadow: 0 2px 6px rgba(0,0,0,.05); transition: transform .15s; }
-    .card:hover { transform: translateY(-4px); }
-    footer { text-align: center; padding: 40px 20px; font-size: .9rem; color: #6b7280; }
-    /* 响应式小优化 */
-    @media (max-width: 480px) {
-      header h1 { font-size: 2rem; }
-      nav ul { flex-wrap: wrap; justify-content: center; }
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #2563eb;
+      display: inline-block;
+      padding-bottom: 4px;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin: 60px 0 30px;
     }
   </style>
 </head>
-
 <body>
 
-  <!-- ——— 2️⃣ 顶部横幅 —— -->
-  <header id="home">
-    <h1>YOUR_NAME</h1>
-    <p>YOUR_TAGLINE · 记录代码与生活</p>
+  <header>
+    <h1>RobbinsNest</h1>
+    <p>欢迎来到我的 GitHub Pages 主页</p>
   </header>
 
-  <!-- ——— 3️⃣ 导航栏 —— -->
-  <nav>
-    <ul>
-      <li><a href="#about">关于我</a></li>
-      <li><a href="#projects">项目</a></li>
-      <li><a href="#contact">联系</a></li>
-    </ul>
-  </nav>
+  <main>
+    <section>
+      <h2>关于我</h2>
+      <p>你好！我是 RobbinsNest，这是我的个人主页。你可以通过下方方式联系我，或访问我的 GitHub 查看项目与代码。</p>
+    </section>
 
-  <!-- ——— 4️⃣ 内容区 —— -->
-  <section id="about">
-    <h2>🧑‍💻 关于我</h2>
-    <p>
-      这里写一段简短自我介绍。可以介绍你的技术栈、学习/工作经历或正在折腾的方向。  
-      例如：我是一名前端 / 后端 / 全栈开发者，对 Go / Rust / Vue / Kubernetes 等充满兴趣。
-    </p>
-  </section>
+    <section>
+      <h2>联系方式</h2>
+      <p>
+        🐙 GitHub: <a href="https://github.com/RobbinsNest" target="_blank">https://github.com/RobbinsNest</a><br>
+        📬 Email: <a href="mailto:yourname@example.com">yourname@example.com</a> <!-- 你可以改为真实邮箱 -->
+      </p>
+    </section>
+  </main>
 
-  <section id="projects">
-    <h2>🚀 开源项目</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>项目 A</h3>
-        <p>一句话简介：做了什么、解决什么痛点、用了哪些技术。</p>
-        <p><a href="https://github.com/your-github-username/project-a" target="_blank">View on GitHub →</a></p>
-      </div>
-      <div class="card">
-        <h3>项目 B</h3>
-        <p>同上，建议附上 star / 预览地址。</p>
-        <p><a href="https://github.com/your-github-username/project-b" target="_blank">View on GitHub →</a></p>
-      </div>
-      <!-- 继续添加更多卡片 -->
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>📫 联系方式</h2>
-    <p>
-      - GitHub: <a href="https://github.com/your-github-username" target="_blank">@your-github-username</a><br>
-      - Email: <a href="mailto:youremail@example.com">youremail@example.com</a><br>
-      - Blog: <a href="https://your-blog.com" target="_blank">your-blog.com</a>
-    </p>
-  </section>
-
-  <!-- ——— 5️⃣ 页脚 —— -->
   <footer>
-    © 2025 YOUR_NAME. Built with ❤ using GitHub Pages.
+    © 2025 RobbinsNest · 本页托管于 GitHub Pages
   </footer>
 
-  <!-- ——— 6️⃣ 可选增强脚本：动态加载你的最新仓库（纯前端 fetch GitHub API） —— -->
-  <!--
-  <script>
-    // 如果有兴趣，可根据 GitHub REST API v3 / GraphQL 拉取数据
-  </script>
-  -->
 </body>
 </html>
